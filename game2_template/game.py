@@ -40,7 +40,8 @@ def list_of_items(items):
         if index != len(items)-1:
                 string += ", "
 
-        return string
+    
+    return string
 
 
 
@@ -210,7 +211,7 @@ def print_menu(exits, room_items, inv_items):
 
     """
 
-    print("You need to take " + str(6 - len(rooms["Reception"]["items"])) + " more items to the Reception!\n"
+    print("You need to take " + str(6 - len(rooms["Reception"]["items"])) + " more items to the Reception!\n")
 
 
     print("You can:")
@@ -285,8 +286,7 @@ def execute_take(item_id):
                         inventory.append(each)
                         current_room["items"].remove(each)
                         print("You can only carry 3.0kg maximum, drop some mass to carry " + each["name"])
-
-                    break
+                        break
 
         print("You cannot take that.")
 

@@ -23,7 +23,8 @@ def remove_punct(text):
         if not (each in string.punctuation):
                 newText += each
                 
-        return newText
+    
+    return newText
     
 def remove_spaces(text):
     """This function is used to remove leading and trailing spaces from a string.
@@ -49,19 +50,19 @@ def remove_spaces(text):
     counter = 0
     for each in text:
         if list(text[counter:]) == [" "] * (len(text)-counter):
-                break
+            break
             
         if foundText == True :
-                newText += each
+            newText += each
         elif foundText == False and each != " ":
-                newText += each
-                foundText = True
+            newText += each
+            foundText = True
 
-            counter += 1
+        counter += 1
 
 
 
-        return newText
+    return newText
 
 
 def normalise_input(user_input):
